@@ -1,5 +1,12 @@
 <div class="card-category">
   <h1><%= @list.name %></h1>
+  <a href="#" class="btn btn-flat" id ="btn-movie-count">
+    <% if @bookmarks.count <= 1 %>
+        <%= @bookmarks.count %> movie
+    <% else %>
+         <%= @bookmarks.count%> movies
+         <% end %>
+    </a>
 </div>
 
 <div class="container mt-5">
@@ -13,18 +20,23 @@
     <% @bookmarks.each do |bookmark| %>
       <div class="card-movie mt-3 me-2">
         <%= image_tag bookmark.movie.poster_url %>
-            <div class="card-movie-infos me-2"></h3>
-                <h3 class="me-2"><%= bookmark.movie.title %></h3>
+            <div class="card-movie-infos ">
+                <h3><%= bookmark.movie.title %></h3>
               </div>
 
-            <div class="card-movie-detail">
+            <div class="card-movie-detail pe-2">
                 <%= bookmark.movie.overview %>
             </diV>
 
-            <div class="comment">
-                <p class="fs-6"><%= bookmark.movie.rating %></p>
+            <div class="comment pe-3">
+              <div class="rating mb-2">
+                <%= bookmark.movie.rating %>
                 <i class="fa-solid fa-star ms-2"></i>
-                <%= bookmark.comment %>
+              </div>
+              <div class="comment-text ">
+                <i class="fa-solid fa-quote-right pe-2"></i>
+                <em><%= bookmark.comment %></em>
+              </div>
               </div>
             </diV>
 
