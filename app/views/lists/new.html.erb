@@ -1,8 +1,14 @@
 
 <div class="container">
-  <h1>New List</h1>
+
+  <h1 class = "mt-3">New List</h1>
     <%= simple_form_for @list do |f| %>
     <%= f.input :name %>
     <%= f.submit "Submit list", class: "btn btn-primary" %>
     <% end %>
+
+  <div class="mt-3">
+  <%= link_to "back", lists_path, class:"text-decoration-none"%>
+  </div>
+
 </div>

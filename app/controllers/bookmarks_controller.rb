@@ -4,7 +4,7 @@ class BookmarksController < ApplicationController
     @list = List.find(params[:list_id]) # Ensure the list exists
     @bookmark = Bookmark.new # Initialize a new bookmark
   end
-  
+
    def create
     @bookmark = Bookmark.new(bookmark_params)
     @list = List.find(params[:list_id])
@@ -18,8 +18,9 @@ class BookmarksController < ApplicationController
 
   def destroy
     @bookmark = Bookmark.find(params[:id])
+    list = @bookmark.list
     @bookmark.destroy
-    redirect_to lists_path, notice: "Signet supprimé avec succès."
+    redirect_to list_path(list), notice: "Signet supprimé avec succès."
   end
 
   private
