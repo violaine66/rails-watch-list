@@ -1,4 +1,8 @@
-<div class="card-category">
+<div class="card-category"
+
+   style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+                 url('<%= @list.photo.attached? ? cl_image_path(@list.photo.key, height: 300, crop: :fill) : asset_path("old_movie.png") %>')">
+
   <h1><%= @list.name %></h1>
   <a href="#" class="btn btn-flat" id ="btn-movie-count">
     <% if @bookmarks.count <= 1 %>

@@ -4,6 +4,7 @@
   <h1 class = "mt-3">New List</h1>
     <%= simple_form_for @list do |f| %>
     <%= f.input :name %>
+    <%= f.input :photo, as: :file, label: "Choose a picture" %>
     <%= f.submit "Submit list", class: "btn btn-primary" %>
     <% end %>
 
