@@ -1,33 +1,40 @@
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+}
+
 .card-movie {
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 8px;
   overflow: hidden;
-  height: 120px;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: flex;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   align-items: center;
+  min-height: 120px;
 }
 
 .card-movie img{
-  flex-shrink: 0;
   height: 120px;
-  width: 120px;
   object-fit: cover;
 }
 
 .card-movie-infos {
-  font-size: 16px;
+  font-size: 12px;
   font-weight: bolder;
   margin: 0;
-  font-size: 12px;
   opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
   text-align: center;
+  align-content: center;
+}
+.card-movie-detail{
+  font-size: 14px;
+  flex-grow: 1;
 }
 
-.card-movie .card-movie-infos {
-  padding: 16px;
-}
 .rating i{
   color: #FFDE00;
 }
@@ -35,10 +42,4 @@
   font-size: 14px;
   text-align: center;
 
-}
-.comment-text{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 0;
 }
