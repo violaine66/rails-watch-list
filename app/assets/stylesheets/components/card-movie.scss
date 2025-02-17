@@ -18,10 +18,11 @@
 .card-movie img{
   height: 120px;
   object-fit: cover;
+  object-position: cover;
 }
 
 .card-movie-infos {
-  font-size: 12px;
+  // font-size: 12px;
   font-weight: bolder;
   margin: 0;
   opacity: .7;
@@ -30,12 +31,15 @@
   text-align: center;
   align-content: center;
 }
+.card-movie-infos h3{
+  font-size: 32px;
+}
 .card-movie-detail{
   font-size: 14px;
-  flex-grow: 1;
+  min-height: 100px;
 }
 
-.rating i{
+.card-movie-infos i{
   color: #FFDE00;
 }
 .comment{

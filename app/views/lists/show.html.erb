@@ -24,10 +24,12 @@
         <div class="card-movie mt-3 me-2 ">
           <div class="d-flex justify-content-evenly">
             <%= image_tag bookmark.movie.poster_url %>
-              <div class="card-movie-infos ">
+              <div class="card-movie-infos fs-5">
                   <h3><%= bookmark.movie.title %></h3>
+                  <%= bookmark.movie.rating %>
+                <i class="fa-solid fa-star pe-2 "></i>
               </div>
-            </div>
+          </div>
 
           <div class="card-movie-detail ms-1 mt-3 pe-2">
             <%= bookmark.movie.overview %>
@@ -36,8 +38,7 @@
           <div class="comment mt-3 mb-1 d-flex justify-content-between align-items-stretch ">
 
             <div class="rating">
-              <%= bookmark.movie.rating %>
-              <i class="fa-solid fa-star pe-2 "></i>
+
               <i class="fa-solid fa-quote-right text-dark"></i>
               <em><%= bookmark.comment %></em>
             </div>
